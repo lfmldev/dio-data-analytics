@@ -6,4 +6,4 @@
 * Power BI Analyst
 * SQL Database Specialist
 * Machine Learning Specialist
-* Puthon Developer
+* Python Developer
