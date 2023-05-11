@@ -1,6 +1,7 @@
 # Programa simulacro de um sistema bancário Versão 01
 
 menu = """
+Escolha a operação desejada
 
 [1] Depositar
 [2] Sacar
@@ -36,6 +37,7 @@ while True:
     
     elif opcao == "2":
         print("SAQUE")
+
         if numero_saques == LIMITE_SAQUES:
             print("Limite de saques atingido!")
         
@@ -46,14 +48,19 @@ while True:
                 saldo = saldo - saque
                 extrato += f"Saque R${saque:.2f}\n"
                 print( f"Saldo Atualizado: R${saldo:.2f}")
+
+            elif saque > 500:
+                print("limite de saque de R$500,00 extrapolado!")
+
             else:
-                print("Saldo insuficiente na conta ou limite de saque de R$500,00 extrapolado!")
+                print("Saldo insuficiente na conta")
     
     elif opcao == "3":
-        print("EXTRATO")
-        print( f"Número de saques realizados: {numero_saques}")
+        print("========== EXTRATO ==========")
+        print( f"Número de saques realizados: {numero_saques}\n")
         print(extrato)
-        print( f"Saldo Atual: R${saldo:,.2f}")
+        print()
+        print( f"Saldo Atual: R${saldo:,.2f}\n")
     
 
     elif opcao == "4":
