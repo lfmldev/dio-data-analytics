@@ -1,9 +1,9 @@
-# Programa simulacro de um sistema bancário Versão 01
+# Programa simulacro de um sistema bancário Versão 02
 
 # Definir uma função para o menu:
 def menu():
 
-    menu = """
+    menu = """\n
     Escolha a operação desejada
 
     [1] Depositar
@@ -15,9 +15,7 @@ def menu():
     [7] Sair
 
     => """
-    print(menu)
-    escolha = input()
-    return escolha
+    return input(menu)
 
 # Função com parâmetros por posição , a contrabarra define que todos os parâmetros
 # a esquerda são posicionais, ele não aceita por exemplo "saldo="
@@ -94,6 +92,8 @@ def listar_contas(contas):
     print("=" * 100)
 
 def main():
+    LIMITE_SAQUES = 3
+    AGENCIA = "0001"
 
     saldo = 0
     limite = 500
@@ -101,10 +101,6 @@ def main():
     numero_saques = 0
     usuarios = []
     contas = []
-
-
-    LIMITE_SAQUES = 3
-    AGENCIA = "0001"
 
     while True:
 
